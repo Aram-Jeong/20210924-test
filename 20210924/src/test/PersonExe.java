@@ -59,15 +59,11 @@ public class PersonExe {
 		int choice = ScanUtil.readInt("추가할 유형 선택 >>");
 		String name = ScanUtil.readStr("이름 입력");
 		Gender gender = ScanUtil.readGender("성별 입력. [남자 | 여자]");
+		
 		String phone = ScanUtil.readStr("연락처 입력");
 		Person person = null;
 		if (choice == 1) {
 			person = new Person(name, gender, phone);
-			if (gender == Gender.MEN) {
-
-			} else if (gender == Gender.WOMEN) {
-
-			}
 		} else if (choice == 2) {
 			String school = ScanUtil.readStr("학교 입력");
 			person = new Student(name, gender, phone, school);
